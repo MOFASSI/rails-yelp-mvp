@@ -1,0 +1,16 @@
+
+<%= form_for (@restaurant), :html => {:class => "form-horizontal center"} do |f| %>
+<div class="form-group">
+name : <%= f.text_field :name %>
+</div>
+<div class="form-group">
+address :<%= f.text_field :address %>
+</div>
+<div class="form-group">
+phone_number :<%= f.text_field :phone_number %>
+</div>
+category :<%= f.select :category, Restaurant::CATEGORIES %>
+<div class="">
+<%=  f.submit %>
+</div>
+<% end  %>
